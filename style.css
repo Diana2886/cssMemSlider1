@@ -5,55 +5,122 @@
 }
 
 .dark-section {
-  background-color: rgb(87, 87, 87);
+  background-color: #424242;
 }
 
 .container {
-  width: 80vw;
+  width: 70vw;
   height: 100vh;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90vw;
+  }
 }
 
 .slider {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  text-align: center;
-  overflow: hidden;
+  width: 100%;
   margin: auto;
+}
+
+.img-wrap {
+  width: 25%;
 }
 
 .img {
   display: flex;
-  align-items: flex-start;
-  overflow: hidden;
   margin-top: 1.5rem;
-  width: 100%;
+  width: 400%;
   height: 100%;
+  transition: all 0.3s ease;
 }
 
 .img img {
-  display: block;
-  border-radius: 1rem;
-  width: 60vw;
-
-  object-fit: cover;
-}
-
-.low-part {
-  display: flex;
-}
-
-.text {
-  display: flex;
-  width: 70%;
-  overflow: hidden;
-  margin-top: 1.5rem;
-}
-
-.text p {
   width: 100%;
+  border-radius: 1rem;
+}
+
+.slider input {
+  display: none;
+}
+
+#slide1:checked ~ #slides .img {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .img {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .img {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .img {
+  margin-left: -300%;
+}
+
+.controls {
+  margin: -1rem 0 0;
+  text-align: end;
+}
+
+@media (max-width: 425px) {
+  .controls {
+    margin: -4rem 0 0;
+    text-align: center;
+  }
+}
+
+.controls label {
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0 0 0 0.5rem;
+  cursor: pointer;
+  background: #6d9bfd;
+}
+
+.controls label span {
+  width: 1rem;
+  height: 1rem;
+  padding: 1.5rem;
+}
+
+.controls label:hover {
+	background: #ffffff;
+}
+
+#slide1:checked:hover ~ .controls label:nth-of-type(1),
+#slide2:checked:hover ~ .controls label:nth-of-type(2),
+#slide3:checked:hover ~ .controls label:nth-of-type(3),
+#slide4:checked:hover ~ .controls label:nth-of-type(4){
+  border-color: #ffffff;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4) {
+  background: none;
+  border: 0.13rem solid #6d9bfd;
+}
+
+.text-p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 425px) {
+  .text-p {
+    padding-top: 4rem;
+  }
 }

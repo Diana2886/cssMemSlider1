@@ -8,33 +8,29 @@
   <title>cssMemSlider</title>
 </head>
 <body>
-  <main>
-    <section class="dark-section">
-      <div class="container">
-        <div class="slider">
+  <div class="dark-section">
+    <div class="container">
+      <div class="slider">
+        <input type="radio" name="point" id="slide1" checked>
+        <input type="radio" name="point" id="slide2">
+        <input type="radio" name="point" id="slide3">
+        <input type="radio" name="point" id="slide4">
+        <div id="slides">
           <div class="img">
-            <img id="img-1" src="img/awesome.jpg" alt="awesome">
-            <img id="img-2" src="img/shrek.jpg" alt="be_happy">
-            <img id="img-3" src="img/good_idea.jpg" alt="think">
-            <img id="img-4" src="img/good_luck.jpg" alt="good_luck">
-          </div>
-          <div class="low-part">
-            <div class="text">
-              <p>You're awesome!</p>
-              <p>Keep smiling :)</p>
-              <p>Think about it...</p>
-              <p>Good luck!</p>
-            </div>
-            <div class="pagination">
-              <a href="#img-1">1</a>
-              <a href="#img-2">2</a>
-              <a href="#img-3">3</a>
-              <a href="#img-4">4</a>
-            </div>
+            <div class="img-wrap"><img src="img/awesome.jpg" alt="awesome"><p class="text-p">You're awesome!</p></div>
+            <div class="img-wrap"><img src="img/shrek.jpg" alt="be_happy"><p class="text-p">Keep smiling :)</p></div>
+            <div class="img-wrap"><img src="img/good_idea.jpg" alt="think"><p class="text-p">Think about it...</p></div>
+            <div class="img-wrap"><img src="img/good_luck.jpg" alt="good_luck"><p class="text-p">Good luck!</p></div>
           </div>
         </div>
+        <div class="controls">
+          <label for="slide1"><span></span></label>
+          <label for="slide2"><span></span></label>
+          <label for="slide3"><span></span></label>
+          <label for="slide4"><span></span></label>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 </body>
 </html>
